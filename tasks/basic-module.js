@@ -133,3 +133,75 @@ functionWithArgs(2, 3);
 const timesFive = (a) => {
   return a * 5
 };
+
+// Global Scope and Functions
+const myGlobal = 10;
+
+function fun1() {
+oopsGlobal = 5;
+return oopsGlobal;
+}
+
+function fun2() {
+  var output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: " + myGlobal;
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(output);
+}
+
+//Local Scope and Functions
+function myLocalScope() {
+  let myVar = 'a'
+  console.log('inside myLocalScope', myVar);
+}
+myLocalScope();
+console.log('outside myLocalScope', myVar);
+
+
+//Global vs. Local Scope in Functions
+const outerWear = "T-Shirt";
+function myOutfit() {
+  const outerWear = 'sweater';
+  return outerWear;
+}
+myOutfit();
+
+
+// Understanding Undefined Value returned from a Function
+let sum = 0;
+function addThree() {
+  sum = sum + 3;
+}
+function addFive() {
+  sum = sum + 5;
+}
+addThree();
+addFive();
+
+
+//Assignment with a Returned Value
+// Setup
+let processed = 2;
+function processArg(num) {
+  return (num + 3) / 5;
+}
+processed = processArg(7);
+
+
+//Stand in Line
+function nextInLine(arr, item) {
+  arr.push(item);
+  return arr.shift();
+}
+
+
+// Understanding Boolean Values
+function welcomeToBooleans() {
+  return true; // Change this line
+}
+
+
