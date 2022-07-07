@@ -59,3 +59,77 @@ const myVerb = "ran";
 const myAdverb = "quickly";
 
 const wordBlanks = myNoun + ' ' + myVerb + ' ' + myAdjective + ' ' + myAdverb + ' '; // Change this line// Only change code above this line
+
+
+//Store Multiple Values in one Variable using JavaScript Arrays
+const myArray1 = ["string", 2];
+
+
+//Nest one Array within Another Array
+const myArray2 = [[123], ["best"]];
+
+
+// Access Array Data with Indexes
+const myArray3 = [50, 60, 70];
+let myData = myArray3[0];
+
+
+//Modify Array Data With Indexes
+const myArray4 = [18, 64, 99];
+myArray4[0] = 45
+
+
+//Access Multi-Dimensional Arrays With Indexes
+const myArray5 = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [[10, 11, 12], 13, 14],
+];
+const myData2 = myArray5[2][1];
+
+
+//Manipulate Arrays With push()
+const myArray6 = [["John", 23], ["cat", 2]];
+myArray6.push(["dog", 3]);
+
+
+//Manipulate Arrays With pop()
+const myArray7 = [["John", 23], ["cat", 2]];
+const removedFromMyArray1 = myArray7.pop();
+
+
+//Manipulate Arrays With shift()
+const myArray8 = [["John", 23], ["dog", 3]];
+const removedFromMyArray2 = myArray8.shift();
+
+
+
+//Manipulate Arrays With unshift()
+const myArray9 = [["John", 23], ["dog", 3]];
+myArray9.shift();
+myArray9.unshift(['Paul', 35]);
+
+
+//Shopping List
+const myList = [["firstItem", 2], ["Second", 2], ["Third", 23], ["AAA", 22], ["ktaS", 21]];
+
+
+// Write Reusable JavaScript with Functions
+function reusableFunction() {
+  console.log('Hi World');
+};
+reusableFunction();
+
+
+//Passing Values to Functions with Arguments
+const functionWithArgs = (param1, param2) => {
+  console.log(param1 + param2)
+};
+functionWithArgs(2, 3);
+
+
+// Return a Value from a Function with Return
+const timesFive = (a) => {
+  return a * 5
+};
