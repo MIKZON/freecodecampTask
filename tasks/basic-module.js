@@ -21,3 +21,20 @@ let myStr5 = "Learning to code is ";
 myStr += someAdjective
 
 
+// Find the Length of a String
+let lastNameLength = 0;
+const lastNameOne = "Lovelace";
+lastNameLength = lastName.length; // Change this line
+
+
+//Use Bracket Notation to Find the First Character in a String
+let firstLetterOfLastName = "";
+const lastNameSec = "Lovelace";
+firstLetterOfLastName = lastName[0]; // Change this line
+
+
+//Understand String Immutability
+let myStr = "Jello World";
+myStr = 'Hello World'; // Change this line
+
+
