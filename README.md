@@ -1,5 +1,5 @@
 ## freeCodeCamp
 
 ```
-Solved problems from freeCodeCamp
+Solved problems from freeCodeCamp.
 ```
