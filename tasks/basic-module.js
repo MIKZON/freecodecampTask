@@ -467,3 +467,348 @@ else if (strokes >= par + 3) {
 }
 
 
+//Selecting from Many Options with Switch Statements
+function caseInSwitch(val) {
+  let answer = "";
+switch(val) {
+  case 1:
+  answer = 'alpha'
+  break;
+  case 2:
+  answer = 'beta'
+  break;
+  case 3:
+  answer = 'gamma'
+  break;
+  case 4:
+  answer = 'delta'
+  break;
+}
+  return answer;
+}
+
+caseInSwitch(1);
+
+
+//Adding a Default Option in Switch Statements
+function switchOfStuff(val) {
+  let answer = "";
+switch(val) {
+  case 'a':
+  answer = 'apple';
+  break;
+  case 'b':
+  answer = 'bird';
+  break;
+  case 'c':
+  answer = 'cat';
+  break;
+
+  default:
+  answer = 'stuff';
+  break;
+}
+
+
+  // Only change code above this line
+  return answer;
+}
+
+switchOfStuff(1);
+
+//Multiple Identical Options in Switch Statements
+function sequentialSizes(val) {
+  let answer = "";
+switch (val) {
+  case 1:
+  case 2:
+  case 3:
+    answer = 'Low';
+    break;
+  case 4:
+  case 5:
+  case 6:
+    answer = 'Mid';
+    break;
+
+  case 7:
+  case 8:
+  case 9:
+    answer = 'High';
+    break;
+}
+  return answer;
+}
+
+sequentialSizes(1);
+
+
+//Replacing If Else Chains with Switch
+function chainToSwitch(val) {
+  let answer = "";
+switch (val) {
+  case "bob":
+    answer = "Marley";
+    break;
+  case 42:
+    answer = "The Answer";
+    break;
+  case 1:
+    answer = "There is no #1";
+    break;
+  case 99:
+    answer = "Missed me by this much!";
+    break;
+   case 7:
+    answer = "Ate Nine";
+    break;
+
+}
+  return answer;
+}
+chainToSwitch(7);
+
+
+//Returning Boolean Values from Functions
+function isLess(a, b) {
+  return a < b
+}
+
+isLess(10, 15);
+
+
+//Return Early Pattern for Functions
+function abTest(a, b) {
+  if (a < 0 || b < 0) {
+    return undefined
+  }
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+abTest(2,2);
+
+
+//Counting Cards
+let count = 0;
+function cc(card) {
+  switch (card) {
+  case 2:
+  case 3:
+  case 4:
+  case 5:
+  case 6:
+    count += 1;
+    break;
+
+  case 7:
+  case 8:
+  case 9:
+    count += 0;
+    break;
+  case 10:
+  case "J":
+  case "Q":
+  case "K":
+  case "A":
+    count -= 1;
+    break;
+}
+  return count > 0 ? `${count} Bet` : `${count} Hold`
+};
+
+
+//Build JavaScript Objects
+const myDog = {
+  name: "barkleey",
+  legs: 4,
+  tails: 4,
+  friends: [2],
+};
+
+
+//Accessing Object Properties with Dot Notation
+const testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+const hatValue = testObj.hat;      // Change this line
+const shirtValue = testObj.shirt    // Change this line
+
+
+//Accessing Object Properties with Bracket Notation
+const testObj1 = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+const entreeValue = testObj1['an entree'];   // Change this line
+const drinkValue = testObj1['the drink'];    // Change this line
+
+
+// Accessing Object Properties with Variables
+const testObj2 = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+const playerNumber = 16;  // Change this line
+const player = testObj2[playerNumber];   // Change this line
+
+
+//Updating Object Properties
+const myDog5 = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+myDog5.name = "Happy Coder";
+
+
+//Add New Properties to a JavaScript Object
+const myDog7 = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+myDog7.bark = 'bow-wow';
+
+
+// Delete Properties from a JavaScript Object
+const myDog8 = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"],
+  "bark": "woof"
+};
+delete myDog8.tails
+
+//Using Objects for Lookups
+function phoneticLookup(val) {
+  let result = "";
+  const lookup = {
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie": "Chicago",
+    "delta": "Denver",
+    "echo": "Easy",
+    "foxtrot": "Frank",
+  }
+  result = lookup[val];
+  return result;
+}
+
+phoneticLookup("charlie");
+
+
+//Testing Objects for Properties
+function checkObj(obj, checkProp) {
+  return obj.hasOwnProperty(checkProp) ? obj[checkProp] : 'Not Found';
+}
+
+
+//Manipulating Complex Objects
+myMusic.push({'artist': 'Michael Jackson', 'title': 'Piano Man', 'release_year': 133, 'formats': ['asd', 'tset', 'ad']});
+console.log(myMusic);
+
+
+//Accessing Nested Objects
+const myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+const gloveBoxContents = myStorage.car.inside['glove box'];
+
+
+//Accessing Nested Arrays
+const myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }
+];
+const secondTree = myPlants[1].list[1]
+console.log(secondTree);
+
+
+//Record Collection
+skipped, vernutsya
+
+
+//Iterate with JavaScript While Loops
+const myArray = [];
+let i = 5;
+while (i >= 0) {
+  myArray.push(i);
+  i -= 1;
+  console.log(myArray);
+}
+
+
+// Iterate with JavaScript For Loops
+const myArray4 = [];
+for (let i = 1; i <= 5; i += 1) {
+  myArray4.push(i)
+}
+console.log(myArray4);
+
+
+//Iterate Odd Numbers With a For Loop
+const myArray7 = [];
+for (let i = 1; i < 10; i += 2) {
+  myArray7.push(i)
+}
+
+
+//Count Backwards With a For Loop
+const myArray6 = [];
+for (let i = 9; i >= 1; i -= 2) {
+  myArray6.push(i)
+}
+
+
+//Iterate Through an Array with a For Loop
+const myArr = [2, 3, 4, 5, 6];
+let total = 0
+for (let i = 0; i < myArr.length; i += 1) {
+  total += myArr[i];
+  console.log(total)
+}
+
+
+//Nesting For Loops
+function multiplyAll(arr) {
+  let product = 1;
+  for (let i = 0; i < arr.length; i += 1) {
+    for (let j = 0; j < arr[i].length; j += 1) {
+      product *= arr[i][j]
+    }
+  }
+  return product;
+}
+multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+
+
+
