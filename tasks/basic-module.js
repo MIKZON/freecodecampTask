@@ -811,4 +811,41 @@ function multiplyAll(arr) {
 multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
 
 
+//Iterate with JavaScript Do...While Loops
+const myArray24 = [];
+let j = 10;
+do {
+   myArray24.push(j);
+  i++;
+} while (j < 5);
+
+
+
+//Replace Loops using Recursion
+function sum(arr, n) {
+  if (n <= 0) {
+    return n;
+  };
+  return sum(arr, n - 1) + arr[n - 1];
+}
+
+
+//Profile Lookup
+
+
+
+
+
+
+// Generate Random Fractions with JavaScript
+function randomFraction() {
+  return Math.random();
+};
+
+
+//Generate Random Whole Numbers with JavaScript
+function randomWholeNum() {
+  return Math.floor(Math.random() * 10);
+};
+
 
