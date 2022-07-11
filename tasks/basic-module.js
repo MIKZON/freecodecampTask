@@ -831,6 +831,17 @@ function sum(arr, n) {
 
 
 //Profile Lookup
+function lookUpProfile(name, prop) {
+  for (let i = 0; i < contacts.length; i += 1) {
+    if (contacts[i]['firstName'] === name) {
+      if (contacts[i].hasOwnProperty(prop)) {
+        return contacts[i][prop]
+      }
+       return 'No such property'
+    }
+  }
+  return 'No such contact'
+}
 
 
 
