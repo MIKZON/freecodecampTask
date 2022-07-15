@@ -80,8 +80,27 @@ console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
 
 
 //Iterate Through All an Array's Items Using For Loops
+function filteredArray(arr, elem) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i += 1) {
+    if (arr[i].includes(elem) === false) {
+      newArr.push(arr[i])
+    }
+  }
+  return newArr;
+}
+
+console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
 
 
+// Create complex multi-dimensional arrays
+let myNestedArray = [
+  'level 1',                   /* myNestedArray[0]             */
+  ['level 2'],	               /* myNestedArray[1][0]          */
+  [['level 3','deep']],	       /* myNestedArray[2][0][0]       */
+  [[['level 4','deeper']]],    /* myNestedArray[3][0][0][0]    */
+  [[[['level 5','deepest']]]]  /* myNestedArray[4][0][0][0][0] */
+];
 
 
 //Add Key-Value Pairs to JavaScript Objects
@@ -224,3 +243,28 @@ function addFriend(userObj, friend) {
 }
 
 console.log(addFriend(user, 'Pete'));
+
+// Iterate Through the Keys of an Object with a for...in Statement
+const users = {
+  Alan: {
+    online: false
+  },
+  Jeff: {
+    online: true
+  },
+  Sarah: {
+    online: false
+  }
+}
+
+function countOnline(usersObj) {
+  let count = 0;
+  for (let user in usersObj) {
+    if (usersObj[user].online === true) {
+      count += 1;
+    }
+  }
+  return count;
+}
+
+console.log(countOnline(users));
