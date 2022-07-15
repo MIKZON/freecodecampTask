@@ -117,3 +117,11 @@ function myFunc() {
     console.log("Still going!");
   }
 }
+
+
+//Find the Longest Word in a String
+function findLongestWordLength(str) {
+  const arrLength = str.split(' ').map((e) => e.length)
+    return arrLength.reduce((a, b) => a > b ? a : b);
+}
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
