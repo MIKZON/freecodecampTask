@@ -45,3 +45,42 @@ function repeatStringNumTimes(str, num) {
 repeatStringNumTimes("abc", 3);
 
 
+//Boo who
+function booWho(bool) {
+  if (bool === true) {
+    return true;
+  } else if (isNaN(bool)) {
+    return false;
+  }
+  return !bool;
+}
+
+booWho(null);
+
+
+//Falsy Bouncer
+function bouncer(arr) {
+  return arr.filter((x) => x)
+}
+
+bouncer([7, "ate", "", false, 9]);
+
+
+//Return Largest Numbers in Arrays
+function largestOfFour(arr) {
+  return arr.map((x) => x.reduce((a, b) => a > b ? a : b))
+}
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+
+
+//Title Case a Sentence
+function titleCase(str) {
+  const newStr = str.toLowerCase();
+ return newStr.split(' ').map((x) => x[0].toUpperCase() + x.substr(1)).join(' ')
+}
+
+titleCase("I'm a little tea pot");
+
+
+//
