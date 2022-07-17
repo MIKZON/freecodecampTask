@@ -83,4 +83,9 @@ function titleCase(str) {
 titleCase("I'm a little tea pot");
 
 
-//
+//Confirm the Ending
+function confirmEnding(str, target) {
+  return str.indexOf(target, str.length - target.length) !== -1;
+}
+
+confirmEnding("Bastian", "n");
