@@ -35,3 +35,132 @@ dog.sayLegs();
 
 
 //Define a Constructor Function
+function Dog() {
+  this.name = 'baby',
+  this.color = 'gray',
+  this.numLegs = 4
+}
+
+
+//Use a Constructor to Create Objects
+function Dog() {
+  this.name = "Rupert";
+  this.color = "brown";
+  this.numLegs = 4;
+}
+let hound = new Dog();
+
+
+//Extend Constructors to Receive Arguments
+function Dog(name, color) {
+  this.name = name,
+  this.color = color,
+  this.numLegs = 4
+}
+let terrier = new Dog()
+
+
+//Verify an Object's Constructor with instanceof
+function House(numBedrooms) {
+  this.numBedrooms = numBedrooms;
+};
+let myHouse = new House(4);
+myHouse instanceof House
+
+
+//Understand Own Properties
+function Bird(name) {
+  this.name = name;
+  this.numLegs = 2;
+}
+
+let canary = new Bird("Tweety");
+let ownProps = [];
+
+for (let property in canary) {
+  if (canary.hasOwnProperty(property)) {
+    ownProps.push(property)
+  }
+}
+
+
+//Use Prototype Properties to Reduce Duplicate Code
+function Dog(name) {
+  this.name = name;
+}
+let beagle = new Dog("Snoopy");
+Dog.prototype.numLegs = 4
+
+
+//Iterate Over All Properties
+function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype.numLegs = 4;
+
+let beagle = new Dog("Snoopy");
+
+let ownProps = [];
+let prototypeProps = [];
+
+for (let property in beagle) {
+  if (beagle.hasOwnProperty(property)) {
+    ownProps.push(property);
+  } else {
+    prototypeProps.push(property)
+  }
+}
+
+
+//Understand the Constructor Property
+function Dog(name) {
+  this.name = name;
+}
+function joinDogFraternity(candidate) {
+  if(candidate.constructor === Dog) {
+    return true;
+  }
+  return false;
+}
+
+
+//Change the Prototype to a New Object
+function Dog(name) {
+  this.name = name;
+}
+Dog.prototype = {
+  numLegs: 4,
+  eat: function() {
+    console.log('im eat eat');
+  },
+  describe: function() {
+    console.log('My NamE is ' + this.name)
+  }
+};
+
+
+//Remember to Set the Constructor Property when Changing the Prototype
+function Dog(name) {
+  this.name = name;
+}
+
+// Only change code below this line
+Dog.prototype = {
+  constructor: Dog,
+  numLegs: 4,
+  eat: function() {
+    console.log("nom nom nom");
+  },
+  describe: function() {
+    console.log("My name is " + this.name);
+  }
+};
+
+
+//Understand Where an Object’s Prototype Comes From
+function Dog(name) {
+  this.name = name;
+}
+let beagle = new Dog("Snoopy");
+Dog.prototype.isPrototypeOf(beagle)
