@@ -197,6 +197,36 @@ console.log(JSON.stringify(ratings));
 
 
 //Implement map on a Prototype
+const s = [23, 65, 98, 5];
+
+Array.prototype.myMap = function(callback) {
+  const newArray = [];
+  for (let i = 0; i < this.length; i += 1) {
+    newArray.push(this[i] * 2)
+  }
+  return newArray;
+};
+
+const new_s = s.myMap(function(item) {
+  return item * 2;
+});
+
+
+//Implement the filter Method on a Prototype
+const s = [23, 65, 98, 5];
+Array.prototype.myFilter = function(callback) {
+  const newArray = [];
+  for (let i = 0; i < this.length; i += 1) {
+    if (this[i] % 2 === 1) {
+      newArray.push(this[i])
+    }
+  }
+  return newArray;
+};
+
+const new_s = s.myFilter(function(item) {
+  return item % 2 === 1;
+});
 
 
 
@@ -368,3 +398,6 @@ function alphabeticalOrder(arr) {
 }
 
 alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+
+
+//Split a String into an Array Using the split Method
