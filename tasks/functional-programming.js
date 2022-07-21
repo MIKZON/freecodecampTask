@@ -315,3 +315,56 @@ const watchList = [
 ];
 const filteredList = watchList.map(({Title: title, imdbRating: rating}) => ({title, rating})).filter(s => s.rating > 8.0)
 console.log(filteredList);
+
+
+//Return Part of an Array Using the slice Method
+function sliceArray(anim, beginSlice, endSlice) {
+  return anim.slice(beginSlice, endSlice)
+}
+
+const inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
+sliceArray(inputAnim, 1, 3);
+
+
+//Remove Elements from an Array Using slice Instead of splice
+function nonMutatingSplice(cities) {
+  return cities.slice(0, 3);
+}
+
+const inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
+nonMutatingSplice(inputCities);
+
+
+
+//Combine Two Arrays Using the concat Method
+function nonMutatingConcat(original, attach) {
+  return original.concat(attach)
+}
+
+const first = [1, 2, 3];
+const second = [4, 5];
+nonMutatingConcat(first, second);
+
+
+//Add Elements to the End of an Array Using concat Instead of push
+function nonMutatingPush(original, newItem) {
+  return original.concat(newItem);
+}
+
+const first = [1, 2, 3];
+const second = [4, 5];
+nonMutatingPush(first, second);
+
+
+//Use the reduce Method to Analyze Data
+
+
+
+
+
+//Sort an Array Alphabetically using the sort Method
+function alphabeticalOrder(arr) {
+  return arr.sort();
+}
+
+alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
