@@ -376,6 +376,23 @@ const second = [4, 5];
 nonMutatingConcat(first, second);
 
 
+//Combine an Array into a String Using the join Method
+function sentensify(str) {
+  return str.split(/\W+/).join(' ')
+
+}
+
+sentensify("May-the-force-be-with-you");
+
+
+//Split a String into an Array Using the split Method
+function splitify(str) {
+  return str.split(/\W+/)
+}
+
+splitify("Hello World,I-am code");
+
+
 //Add Elements to the End of an Array Using concat Instead of push
 function nonMutatingPush(original, newItem) {
   return original.concat(newItem);
