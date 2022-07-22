@@ -605,3 +605,21 @@ function add(x) {
 }
 
 add(10)(20)(30);
+
+
+//Refactor Global Variables Out of Functions
+const bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+function add(orig, bookName) {
+  const newBookList = [...orig]
+  newBookList.push(bookName);
+  return newBookList;
+}
+
+function remove(orig, bookName) {
+  const newBookList = [...orig]
+  const book_index = newBookList.indexOf(bookName);
+  if (book_index >= 0) {
+     newBookList.splice(book_index, 1);
+      return newBookList;
+    }
+}
