@@ -400,4 +400,42 @@ function alphabeticalOrder(arr) {
 alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
 
 
+//Return a Sorted Array Without Changing the Original Array
+const globalArray = [5, 6, 3, 2, 9];
+
+function nonMutatingSort(arr) {
+  let newArr = [...arr]
+  return newArr.sort((a, b) => a - b)
+}
+
+nonMutatingSort(globalArray);
+
+
 //Split a String into an Array Using the split Method
+
+
+
+//Apply Functional Programming to Convert Strings to URL Slugs
+function urlSlug(title) {
+  let newTitle = title.toLowerCase().split(' ')
+  return newTitle.filter((e) => e !== '').join('-');
+
+}
+urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone");
+
+
+//Use the every Method to Check that Every Element in an Array Meets a Criteria
+function checkPositive(arr) {
+ return arr.every((a) => a > 0)
+}
+
+checkPositive([1, 2, 3, -4, 5]);
+
+
+
+//Use the some Method to Check that Any Elements in an Array Meet a Criteria
+function checkPositive(arr) {
+  return arr.some((el) => el > 0)
+}
+
+checkPositive([1, 2, 3, -4, 5]);
