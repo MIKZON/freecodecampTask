@@ -85,7 +85,17 @@ titleCase("I'm a little tea pot");
 
 //Confirm the Ending
 function confirmEnding(str, target) {
-  return str.indexOf(target, str.length - target.length) !== -1;
+  return str.slice(str.length - target.length) === target
+}
+confirmEnding("Bastian", "n");
+
+
+//Truncate a String
+function truncateString(str, num) {
+  if (str.length <= num) {
+    return str;
+  }
+  return str.slice(0, num) + '...'
 }
 
-confirmEnding("Bastian", "n");
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
