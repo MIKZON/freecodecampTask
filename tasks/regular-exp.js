@@ -53,5 +53,22 @@ let alphabetRegex = /[a-z]/gi;
 let result = quoteSample.match(alphabetRegex);
 
 
-//
+//Match Numbers and Letters of the Alphabet
+let quoteSample = "Blueberry 3.141592653s are delicious.";
+let myRegex = /[h-s2-6]/gi;
+let result = quoteSample.match(myRegex);
 
+
+//Match Single Characters Not Specified
+let quoteSample = "3 blind mice.";
+let myRegex = /[^0-9aeiou]/gi;
+let result = quoteSample.match(myRegex);
+
+
+//Match Characters that Occur One or More Times
+let difficultSpelling = "Mississippi";
+let myRegex = /s+/ig;
+let result = difficultSpelling.match(myRegex);
+
+
+//Match Characters that Occur Zero or More Times
