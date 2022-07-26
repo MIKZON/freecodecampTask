@@ -99,3 +99,31 @@ function truncateString(str, num) {
 }
 
 truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+
+//Finders Keepers
+function findElement(arr, func) {
+  for (let i = 0; i < arr.length; i += 1) {
+    if (func(arr[i])) {
+      return arr[i]
+    }
+  }
+}
+
+findElement([1, 2, 3, 4], num => num % 2 === 0);
+
+
+//Mutations
+function mutation(arr) {
+  let test = arr[1].toLowerCase();
+  let target = arr[0].toLowerCase();
+
+  for (let i = 0; i < test.length; i += 1) {
+    if (target.indexOf(test[i]) < 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+mutation(["hello", "hey"]);
