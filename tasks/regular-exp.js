@@ -123,3 +123,43 @@ let result = movieName.match(noNumRegex).length;
 
 
 //Restrict Possible Usernames
+
+
+
+//Match Whitespace
+let sample = "Whitespace is important in separating words";
+let countWhiteSpace = /\s/g;
+let result = sample.match(countWhiteSpace);
+
+
+// Match Non-Whitespace Characters
+let sample = "Whitespace is important in separating words";
+let countNonWhiteSpace = /\S/g;
+let result = sample.match(countNonWhiteSpace);
+
+
+//Specify Upper and Lower Number of Matches
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6} no/;
+let result = ohRegex.test(ohStr);
+
+
+//Specify Only the Lower Number of Matches
+let haStr = "Hazzzzah";
+let haRegex = /Haz{3,}zah/;
+let result = haRegex.test(haStr);
+
+
+//Specify Exact Number of Matches
+let timStr = "Timmmmber";
+let timRegex = /Tim{3}mber/;
+let result = timRegex.test(timStr);
+
+
+//Check for All or None
+let favWord = "favorite";
+let favRegex = /favou?rite/;
+let result = favRegex.test(favWord);
+
+
+//Positive and Negative Lookahead
