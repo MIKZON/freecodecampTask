@@ -127,3 +127,15 @@ function mutation(arr) {
 }
 
 mutation(["hello", "hey"]);
+
+
+//Restrict Possible Usernames
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i;
+let result = userCheck.test(username);
+
+
+//Check For Mixed Grouping of Characters
+let myString = "Eleanor Roosevelt";
+let myRegex = /(Franklin|Eleanor).*Roosevelt/i;
+let result = myRegex.test(myString);
