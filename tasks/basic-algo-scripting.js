@@ -139,3 +139,17 @@ let result = userCheck.test(username);
 let myString = "Eleanor Roosevelt";
 let myRegex = /(Franklin|Eleanor).*Roosevelt/i;
 let result = myRegex.test(myString);
+
+
+//Reuse Patterns Using Capture Groups
+let repeatNum = "42 42 42";
+let reRegex = /^(\d+)\s\1\s\1$/;
+let result = repeatNum.match(repeatNum);
+
+
+
+//Use Capture Groups to Search and Replace
+let str = "one two three";
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
+let replaceText = "$3 $2 $1"; // Change this line
+let result = str.replace(fixRegex, replaceText);
