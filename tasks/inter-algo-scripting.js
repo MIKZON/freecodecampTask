@@ -13,3 +13,16 @@ function myReplace(str, before, after) {
 }
 
 myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+
+
+//Sum All Numbers in a Range
+function sumAll(arr) {
+  let result = 0;
+  let sortArr = arr.sort((a, b) => (a - b));
+  for (let i = sortArr[0]; i <= sortArr[1]; i += 1) {
+   result += i;
+  }
+  return result;
+}
+
+sumAll([1, 4]);
